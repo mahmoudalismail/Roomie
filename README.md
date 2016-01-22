@@ -1,4 +1,4 @@
-# roomie
+# Roomie
 CarnegieApps Hackathon 16'
 
 # License
