@@ -3,6 +3,7 @@ var mongoose = require('mongoose')
 
 var appartmentSchema = new Schema ({
 	location: [Number],
+	address: String,
 	roommate: Number,
 	price: Number,
 	phonenum: Number,
