@@ -22,7 +22,15 @@
     margin-left: -250px;
     overflow-y: auto;
     background: #3f3f3f;
+
 }
+
+html, body, #map-canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
 
 
 /* Sidebar Styles */
@@ -74,8 +82,35 @@
     background: none;
 }
 
+
 .footer{
-	background-color: red;
 	margin-top:auto;
+	background: rgba(63,63,63, 0.9);
+	margin:auto;
+	position:fixed;
+	bottom:0;
+
+}
+.map{
+	padding-bottom:230px;
+}
+.property-image{
+	margin-top:10px;
+	width:200px;
+
+}
+.fa-bars{
+	position: fixed;
+    margin-top: 5px;
+    margin-left: 10px;
+    z-index: 10000000000;
+    color:black;
 }
 
+#map{
+    width: 100%; 
+    height: 100%;
+  /*  position: absolute;
+    margin-left: 15%;
+    margin-top: 5%;*/
+}
