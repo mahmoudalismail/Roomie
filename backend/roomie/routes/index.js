@@ -4,14 +4,36 @@ var mongoose = require('mongoose');
 var Apartment = require('../models/model.js');
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+router.get('/', function(req, res, next) {
+   res.render('index', { title: 'Express' });
+});
 
-router.get('/', function(req, res){
+/* get all apartments */
+/* AJAX */
+router.get('/getAll', function(req, res){
 
-	// var logoPath = "/Users/mahmoudalismail/Desktop/AlWakalat/Logos/cadillac_logo_100x100.png";
-	
+	var apart = Apartment.find({}, function(err, result){
+		if(err){
+			console.log("ERROR");
+			res.send(null);
+		}
+		console.log("Results: ", result);
+		res.send({aparts: JSON.stringify(result)});
+	})
+})
+
+/* AJAX */
+router.get('/find', function(req, res){
+/*
+ * request data is accessed by: 
+ * 	req.query.<yourField>
+ */
+	res.send("Nothing here for you to see!");
+})
+
+/* populate database */
+router.get('/fillApart', function(req, res){
+
 	var appartmentSchema = new Apartment ({
 		"category": "studio", 
 		"location":[1,2],
@@ -32,17 +54,5 @@ router.get('/', function(req, res){
   		});
 
 });
-
-
-
-router.get('/get', function(req, res){
-
-	var apart = Apartment.find({}, function(err, result){
-		if(err)
-			console.log("ERROR");
-		console.log("Results: ", result);
-
-	})
-})
 
 module.exports = router;
