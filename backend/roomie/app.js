@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+mongoose.connect('mongodb://roomie:roomie1234@ds037165.mongolab.com:37165/appartmentsdb/roomie')
 app.use('/', routes);
 app.use('/users', users);
 
