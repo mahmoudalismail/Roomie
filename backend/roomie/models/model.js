@@ -2,6 +2,7 @@ var mongoose = require('mongoose')
 , Schema = mongoose.Schema;
 
 var appartmentSchema = new Schema ({
+	category: String // studio, apartment...
 	location: [Number],
 	address: String,
 	roommate: Number,
