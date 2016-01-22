@@ -7,7 +7,7 @@ var appartmentSchema = new Schema ({
 	roommate: Number,
 	price: Number,
 	phonenum: Number,
-	metadata: [String],
+	metadata: [String], //Example: ["bed:2", "bath:1",...]
 	interests: [String]
 });
 
