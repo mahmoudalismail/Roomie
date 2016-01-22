@@ -5,10 +5,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="./style/custom.css" rel="stylesheet" type="text/css">
+        
+        
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="build/react.js"></script>
-        <script src="build/react-dom.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
   </head>
     </head>
     <body>
@@ -19,12 +23,20 @@
               <div class="navbar-header">
                 <a class="navbar-brand navbar-custom" href="#"><img id="logo" src="./media/logo.png"></a>
               </div>
+        
             </div>
           </nav>
           </div>
-        <div class="col-md-12">
+    
+  
+           <a href="#"><i class="fa fa-bars fa-2x button-left"></i></a>
+
+
+        <div class="col-md-12" id="left-side">
+
           <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
+
                 <li>
                     <a href="#"><i class="fa fa-search"> Filter</i></a>
                 </li>
@@ -34,13 +46,34 @@
             </ul>
           </div>
          </div>
-          <div class="col-md-12 map">
+          <div class="col-md-12 text-center map">
     
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1803.283869310405!2d51.43217285804652!3d25.31872319595997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dc022bfce8c7%3A0x4b46b01bdc7e6218!2sAl+Luqta+St%2C+Ar-Rayyan%2C+Qatar!5e0!3m2!1sen!2s!4v1453490783609" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1803.283869310405!2d51.43217285804652!3d25.31872319595997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dc022bfce8c7%3A0x4b46b01bdc7e6218!2sAl+Luqta+St%2C+Ar-Rayyan%2C+Qatar!5e0!3m2!1sen!2s!4v1453490783609" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
           <div class="col-md-12 text-center footer">
-          <h4>This is where the pics will be displayed</h4>
+       
+            <div class="col-md-3">
+                <img class="property-image"src="http://www.stormchaser.ca/Empty_Quarter/Empty_Quarter_02.JPG">
+                <h5>Title<span> Best match</span></h5>
+                <p>Price</p>
+            </div>
+            <div class="col-md-3">
+                <img class="property-image"src="http://www.stormchaser.ca/Empty_Quarter/Empty_Quarter_02.JPG">
+                  <h5>Title<span> Best match</span></h5>
+                <p>Price</p>
+            </div>
+            <div class="col-md-3">
+                <img class="property-image"src="http://www.stormchaser.ca/Empty_Quarter/Empty_Quarter_02.JPG">
+                <h5>Title<span> Best match</span></h5>
+                <p>Price</p>
+            </div>
+            <div class="col-md-3">
+                <img class="property-image"src="http://www.stormchaser.ca/Empty_Quarter/Empty_Quarter_02.JPG">
+                <h5>Title<span> Best match</span></h5>
+                <p>Price</p>
+            </div>
           
           </div>
+          <script src="build/custom-js.js"></script>
     </body>
 </html>

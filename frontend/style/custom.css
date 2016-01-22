@@ -22,10 +22,13 @@
     margin-left: -250px;
     overflow-y: auto;
     background: #3f3f3f;
+
 }
 
 
-
+#left-side{
+	display:none;
+}
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -75,8 +78,28 @@
     background: none;
 }
 
+
 .footer{
-	background-color: red;
 	margin-top:auto;
+	background: rgba(63,63,63, 0.9);
+	margin:auto;
+	position:fixed;
+	bottom:0;
+
+}
+.map{
+	padding-bottom:230px;
+}
+.property-image{
+	margin-top:10px;
+	width:200px;
+
+}
+.fa-bars{
+	position: fixed;
+    margin-top: 5px;
+    margin-left: 10px;
+    z-index: 10000000000;
+    color:black;
 }
 
