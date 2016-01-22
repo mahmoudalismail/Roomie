@@ -2,7 +2,7 @@ var mongoose = require('mongoose')
 , Schema = mongoose.Schema;
 
 var appartmentSchema = new Schema ({
-	category: String // studio, apartment...
+	category: String, // studio, apartment...
 	location: [Number],
 	address: String,
 	roommate: Number,
@@ -12,4 +12,4 @@ var appartmentSchema = new Schema ({
 	interests: [String]
 });
 
-module.exports = mongoose.model('Model', appartmentSchema);
+module.exports = mongoose.model('Appartment', appartmentSchema);
