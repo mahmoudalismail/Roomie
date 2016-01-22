@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <title>Page Title</title>
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="./style/custom.css" rel="stylesheet" type="text/css">
+        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="build/react.js"></script>
-        <script src="build/react-dom.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+
   </head>
-    </head>
     <body>
         <!--Top Bar-->
         <div class="row">
@@ -34,13 +35,30 @@
             </ul>
           </div>
          </div>
-          <div class="col-md-12 map">
-    
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1803.283869310405!2d51.43217285804652!3d25.31872319595997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dc022bfce8c7%3A0x4b46b01bdc7e6218!2sAl+Luqta+St%2C+Ar-Rayyan%2C+Qatar!5e0!3m2!1sen!2s!4v1453490783609" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
+          <!-- <div class="col-md-12 text-center"> -->
+                    
+            <div class="col-md-12" id="map" style="">
+              <div id="map-canvas"></div>
+               <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Q0QCbFhbqCHHVyWYAItHyGdPnR_y8hg&signed_in=true&callback=initMap"></script>
+           
+            <script src="build/maps_api.js"></script>
+            
+
+            </div>
+                               
+          <!-- </div> -->
           <div class="col-md-12 text-center footer">
           <h4>This is where the pics will be displayed</h4>
-          
+          <h4>This is where the pics will be displayed</h4>
+          <h4>This is where the pics will be displayed</h4>
+          <h4>This is where the pics will be displayed</h4>
+          <h4>This is where the pics will be displayed</h4>
+          <h4>This is where the pics will be displayed</h4>
           </div>
+      
+
+
+
     </body>
 </html>
