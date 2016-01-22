@@ -1,1 +1,1 @@
-sudo docker run --name roomie -d mongo
+docker run --name roomie -d mongo
