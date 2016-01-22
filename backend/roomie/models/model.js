@@ -9,4 +9,4 @@ var appartmentSchema = new Schema ({
 	interests: [String]
 });
 
-module.exports = mongoose.model('Model', modelSchema);
+module.exports = mongoose.model('Model', appartmentSchema);
