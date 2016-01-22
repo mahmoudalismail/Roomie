@@ -6,3 +6,16 @@
 	background-color:#3f3f3f;
 	margin-bottom:0;
 }
+
+.left-menu{
+	background-color: #3f3f3f;
+	height: 500px;
+}
+
+.left-menu-comp{
+	list-style-type: none;
+}
+
+.fa-filter{
+	color:white;
+}
