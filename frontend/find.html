@@ -6,6 +6,7 @@
              
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+         <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.css'>
         <link href="./style/custom.css" rel="stylesheet" type="text/css">
         
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -48,10 +49,57 @@
         </div>
 
           <div class="col-md-12" id="map" style="">
+              <!--Filter page-->
+          <div class="col-md-6 text-center filter">
+          <h5 class="close">X</h5>
+            <div class="col-md-12">
+            <div id="slider1" class="col-md-3 text-center rslider">
+            </div>
+         
+     
+            <div id="slider2" class="col-md-3 text-center rslider"></div>
+
+            <div id="slider3" class="col-md-3 text-center rslider"></div>
+            </div>
+            <div class="col-md-12 text-center">
+              <div class="col-md-3 text-center">
+                <h4 class="silder-data" id="s1" >Budget</h4>
+                </div>
+                <div class="col-md-3 text-center">
+                <h4 class="silder-data" id="s2">Roommates</h4>
+                </div>
+                <div class="col-md-3 text-center">
+                <h4 class="silder-data" id="s3">Bedrooms</h4>
+                </div>
+
+              </div>
+              <div class="col-md-12 text-center">
+          
+              <div class="styled-select green rounded">
+
+                <select>
+                  <option>Choose desired location</option>
+                  <option>The second option</option>
+                  <option>The third option</option>
+                </select>
+              </div>
+              <form class="form-inline" style="margin-top:20px;">
+                <div class="form-group">
+                  <label style="color:white; padding-right:10px">Occupation Location</label>
+                  <input type="text" class="form-control" style="width:260px; padding-left:10px;"placeholder="Paste Google Maps link">
+                  <button class="btn" style="background-color:#87bb4a; color:white;">My location</button>
+                </div>
+                <button class="btn" style="background-color:#87bb4a; color:white; margin-top:10px; margin-bottom:10px;">Find me a roommate</button>
+                </form>
+              </div>
+            </div>
+
               <div id="map-canvas"></div>
+
                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Q0QCbFhbqCHHVyWYAItHyGdPnR_y8hg&signed_in=true&callback=initMap"></script>
           </div>
-          
+
+      
 
           <div class="col-md-12 text-center footer">
        
@@ -77,6 +125,8 @@
             </div>
           
           </div>
+<script src='https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.js'></script>
 
           <script src="build/custom-js.js"></script>
   </body>

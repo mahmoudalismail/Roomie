@@ -28,3 +28,33 @@ $(".button-left").click(function () {
 	}
 
 });
+
+$(".close").click(function (){
+	document.querySelector(".filter").style.display="none";
+	
+
+	});
+
+$("#slider1").roundSlider({
+    sliderType: "range",
+    startAngle: "90",
+    max: 20000,
+    step: 1000,
+    value: 0
+});
+
+$("#slider2").roundSlider({
+    sliderType: "min-range",
+    startAngle: "90",
+    max: 3,
+    steps:1,
+    value: 0
+});
+
+$("#slider3").roundSlider({
+    sliderType: "min-range",
+    startAngle: "90",
+    max: 4,
+    steps:1,
+    value: 0
+});

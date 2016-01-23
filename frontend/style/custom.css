@@ -112,9 +112,143 @@ html, body, #map-canvas {
 }
 
 #map{
-    width: 100%; 
+    width: 97%; 
     height: 100%;
-  /*  position: absolute;
-    margin-left: 15%;
-    margin-top: 5%;*/
+    margin-left:5%;
+    padding-bottom: 230px;
+ }
+
+ .filter{
+ 	height: auto;
+    width: 690px;
+    margin-left: 280px;
+    background-color: rgba(63,63,63,0.9);
+    margin-top: 15px;
+ 	position:fixed;
+ 	z-index:999999;
+ }
+
+ .rslider {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  
+}
+
+#slider1 .rs-range-color  {
+    background-color: #87bb4a;
+}
+#slider1 .rs-handle:after  {
+    background-color: black;
+}
+#slider1 .rs-border  {
+    border-color: #87bb4a;
+}
+
+#slider2 .rs-range-color  {
+    background-color: #87bb4a;
+}
+#slider2 .rs-handle:after  {
+    background-color: black;
+}
+#slider2 .rs-border  {
+    border-color: #87bb4a;
+}
+
+#slider3 .rs-range-color  {
+    background-color: #87bb4a;
+}
+#slider3 .rs-handle:after  {
+    background-color: black;
+}
+#slider3 .rs-border  {
+    border-color: #87bb4a;
+}
+
+.silder-data{
+	color:white;
+}
+
+#s1{
+	margin-left:80px;
+}
+#s2{
+	margin-left:90px;
+}
+#s3{
+	margin-left:130px;
+}
+.close{
+	color:white;
+	float:right;
+	font-weight: bold
+}
+.close:hover{
+	color:white;
+}
+
+
+.styled-select {
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   display:flex;
+       margin-left: 180px;
+    margin-top: 10px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+
+}
+
+
+/* -------------------- Rounded Corners */
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+
+/* -------------------- Colors: Background */
+
+.green   { background-color: #87bb4a; }
+
+
+/* -------------------- Colors: Text */
+
+.green select   { color: #fff; }
+
+
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection select {
+   border: 0;
+   color: #EEE;
+   background: transparent;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 2px 10px;
+
+}
+
+#mainselection {
+   overflow:hidden;
+   width:350px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px #330033;
+   background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+
+.form-control{
+	width: 260px;
 }
