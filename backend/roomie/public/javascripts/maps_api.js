@@ -28,7 +28,7 @@ function markClicked(marker){
    var value = values[i];
 
    $(".locatr").html("&nbsp" + value.address);
-   $(".rommatr").html("&nbsp" +value.roommate);
+   $(".rommatr").html("&nbsp" +value.roommate + "Roommates");
    $(".bedatr").html("&nbsp" +value.numbeds + "Bedrooms");
    $(".priatr").html("&nbsp" +value.price + "QAR/Month");
 
@@ -36,6 +36,10 @@ function markClicked(marker){
    for (var j = 1; j <= 3; j++  )
       $("#pic" + j ).attr("src", "images/" + i + "_" + j +".jpg" );
 
+}
+
+function picClicked(i){
+  markClicked(markers[i]); 
 }
 
 
@@ -109,11 +113,24 @@ function initMap(){
 
 
 function addPictures(){
+  $('.footer').empty();
   for (var i = 0; i < 4; i++){   
     var marker = markers[i];
     var j = parseInt(marker.title.split("Appartment ")[1]); 
-    var htmlToput = '<div class="col-md-3"><img class="property-image" src="images/' + (j+1) + '_4.jpg"><h5>Title<span> Best match</span></h5><p>Price</p></div>'
+    var htmlToput;
+    if (j == 2)
+      htmlToput = '<div class="col-md-3"><img class="property-image" src="images/' + (j+1) + '_4.jpg"><h5 style="color:white;"> 17 min </h5></div>' 
+    if (j == 1)
+      htmlToput = '<div class="col-md-3"><img class="property-image" src="images/' + (j+1) + '_4.jpg"><h5 style="color:white;"> 22 min </h5></div>'
+    
+    if (j == 0)
+      htmlToput = '<div class="col-md-3"><img class="property-image" src="images/' + (j+1) + '_4.jpg"><h5 style="color:white;"> 25 min </h5></div>'
+
+    if (j==3)
+      htmlToput = '<div class="col-md-3"><img class="property-image" src="images/' + (j+1) + '_4.jpg"><h5 style="color:white;"> 15 min </h5></div>'
+  
     $(".footer").append(htmlToput);
+    
   }
 
     $(".property-image").hover(function(){
