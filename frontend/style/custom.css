@@ -89,6 +89,7 @@ html, body, #map-canvas {
 	margin:auto;
 	position:fixed;
 	bottom:0;
+	width:100%;
 
 }
 .map{
@@ -96,7 +97,7 @@ html, body, #map-canvas {
 }
 .property-image{
 	margin-top:10px;
-	width:200px;
+	width:150px;
 
 }
 .fa-bars{
@@ -115,6 +116,7 @@ html, body, #map-canvas {
  }
 
  .filter{
+ 	display:none;
  	height: auto;
     width: 690px;
     margin-left: 280px;
@@ -247,4 +249,20 @@ html, body, #map-canvas {
 
 .form-control{
 	width: 260px;
+}
+
+/*### Property ##*/
+ .property{
+ 	height: auto;
+    width: 1030px;
+    margin-left: 65px;
+    background-color: rgba(63,63,63,0.9);
+    margin-top: 15px;
+ 	position:fixed;
+ 	z-index:999999;
+ 	padding-bottom:20px;
+
+ }
+#pref-icon{
+	padding-bottom:10px;
 }

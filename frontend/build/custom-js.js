@@ -35,6 +35,8 @@ $(".close").click(function (){
 
 	});
 
+
+
 $("#slider1").roundSlider({
     sliderType: "range",
     startAngle: "90",
