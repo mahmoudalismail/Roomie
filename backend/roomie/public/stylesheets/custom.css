@@ -33,6 +33,10 @@ html, body, #map-canvas {
     }
 
 
+body{
+  background-color: #3F3F3F;
+}
+
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -91,13 +95,14 @@ html, body, #map-canvas {
 	margin:auto;
 	position:fixed;
 	bottom:0;
+	width:100%;
 
 }
 
 .property-image{
 	margin-top:10px;
 	width:150px;
-
+  height: 150px;
 }
 .fa-bars{
 	position: fixed;
@@ -261,7 +266,7 @@ html, body, #map-canvas {
 
 /*### Property ##*/
  .property{
-    height: auto;
+ 	height: auto;
     width: 1030px;
     margin-left: 65px;
     background-color: rgba(63,63,63,0.9);
@@ -273,4 +278,8 @@ html, body, #map-canvas {
  }
 #pref-icon{
     padding-bottom:10px;
+}
+
+.button-left{
+  color: white;
 }

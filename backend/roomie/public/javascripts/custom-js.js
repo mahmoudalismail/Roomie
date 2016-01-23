@@ -3,30 +3,21 @@ var click=0;
 
 var filtered = 0;
 
-
+var currLocation = {lonitude: 0, latitude: 0};
 
 
 $(".button-left").click(function () {
 	console.log("vis: ",vis);
 	// Set the effect type
     if (click == 0){
-	    var effect = 'slide';
 	    
-	    // Set the options for the effect type chosen
-	    var options = { direction: "left" };
-	    
-	    // Set the duration (default: 400 milliseconds)
-	    var duration = 300;
-
-	    // $('#left-side').toggle(effect, options, duration);
 	    openLeftSide();
 
 	    click = 1;
 	}
 	else{
 		click=0;
-		options = { direction: "right" };
-		//$('#left-side').toggle(effect, options, duration);
+		
 	    closeLeftSide();
 	 
 	}
@@ -40,13 +31,14 @@ $(".close").click(function (){
 
 });
 
+
+
 $(".show-filter").click(function (){
 
 	document.querySelector(".filter").style.display="block";
 	
 
 });
-
 
 $("#slider1").roundSlider({
     sliderType: "range",
@@ -77,6 +69,30 @@ $(".findRoommate").click(function(){
 
 	document.querySelector(".footer").style.display="block";
 	$('#map').css("padding-bottom", 230);
+	var slider1val = $('#slider1 .rs-tooltip.rs-tooltip-text.edit').html();
+	var slider2val = $('#slider2 .rs-tooltip.rs-tooltip-text.edit').html();
+	var slider3val = $('#slider3 .rs-tooltip.rs-tooltip-text.edit').html();
+
+	$.ajax({
+		type: "GET",
+		contentType: "application/json",
+	    url: "http://localhost:3000/filterData",
+	    data: {"budget": slider1val,
+				"roommates" : slider2val,
+				"bedrooms" : slider3val,
+				"workLocation" : currLocation}
+	})
+	.done(function(res) {
+	    console.log("Data", JSON.parse(res));
+	    data = JSON.parse(res)
+
+	    for(var i=0; i<data.length; i++)
+	    	data[i].workLocation = currLocation;
+
+	    initMap2(0, data);
+
+	  });
+
 	closeLeftSide();
 });
 
@@ -85,7 +101,7 @@ function closeLeftSide(){
 
 	    document.querySelector(".button-left").style.marginTop="5px";
 	    document.querySelector(".button-left").style.marginLeft="10px";
-	    document.querySelector(".button-left").style.color="black";
+	    document.querySelector(".button-left").style.color="white";
 
 }
 
@@ -104,3 +120,13 @@ $("#close-pro").click(function(){
 	document.querySelector(".property").style.display="none";
 });
 
+function getLocation(){
+	 if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position){
+        	currLocation.longitude = position.coords.longitude;
+        	currLocation.latitude = position.coords.latitude;
+
+        	$(".form-control").attr("placeholder", currLocation.longitude+", "+currLocation.latitude);
+        });
+	}
+}

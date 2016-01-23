@@ -7,22 +7,24 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
          <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.css'>
-        <link href="./style/custom.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/custom.css" rel="stylesheet" type="text/css">
         
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="build/maps_api.js"></script>
+        
+
+        <script type="text/javascript" src="javascripts/maps_api.js"></script>
   </head>
-  <body onload="addPictures()">
+  <body onload="drawMap()">
         <!--Top Bar-->
         <div class="row">
           <nav class="navbar navbar-default">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand navbar-custom" href="#"><img id="logo" src="./media/logo.png"></a>
+                <a class="navbar-brand navbar-custom" href="#"><img id="logo" src="images/logo.png"></a>
               </div>
         
             </div>
@@ -73,12 +75,11 @@
 
             <div class="col-md-12 text-center">
           
-              
               <form class="form-inline" style="margin-top:20px;">
                 <div class="form-group">
                   <label style="color:white; padding-right:10px">Occupation Location</label>
                   <input type="text" class="form-control" style="width:260px; padding-left:10px;"placeholder="Paste Google Maps link">
-                  <button class="btn" style="background-color:#87bb4a; color:white;">My location</button>
+                  <button class="btn" onclick="getLocation()" style="background-color:#87bb4a; color:white;">My location</button>
                 </div>
                 <button class="btn findRoommate" style="background-color:#87bb4a; color:white; margin-top:10px; margin-bottom:10px;">Find me a roommate</button>
               </form>
@@ -89,8 +90,8 @@
             <div class="col-md-6 text-center property">
           <h5 class="close" id="close-pro">X</h5>
             <div class="col-md-12" style="color:white;">
-              <h4>Propoerty Name</h4>
-            </div>
+<!--               <h4>Property Name</h4>
+ -->            </div>
             
               <div class="col-md-12 text-center">
                 <style>
@@ -113,14 +114,14 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                   <div class="item active">
-                    <img style="height:300px" src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=36467126">
+                    <img id="pic1" style="height:300px" src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=36467126">
                   </div>
                   <div class="item">
-                    <img style="height:300px" src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=36467129">
+                    <img id="pic2" style="height:300px" src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=36467129">
                   </div>
                 
                   <div class="item">
-                    <img style="height:300px" src="http://www.lovecountryliving.com/files/1855627/uploaded/NUM-3.jpg">
+                    <img id="pic3" style="height:300px" src="http://www.lovecountryliving.com/files/1855627/uploaded/NUM-3.jpg">
                   </div>
                 </div>
                 <!-- Left and right controls -->
@@ -136,11 +137,11 @@
             </div>
             <div class="col-md-3" style="color:white;">
               
-              <i class="fa fa-map-marker fa-lg" id="pref-icon"> Location</i><br>
-              <i class="fa fa-users fa-lg" id="pref-icon"> 2 Roommates</i><br>
-              <i class="fa fa-bed fa-lg" id="pref-icon"> 3 Beds</i><br>
-              <i class="fa fa-money fa-lg" id="pref-icon"> 3000 QAR/Month</i><br>
-              <i class="fa fa-clock-o fa-lg" id="pref-icon" style="padding-bottom:20px;"> 30 minutes away from work</i>
+              <i class="fa fa-map-marker fa-lg locatr" id="pref-icon"> Location</i><br>
+              <i class="fa fa-users fa-lg rommatr" id="pref-icon"> 2 Roommates</i><br>
+              <i class="fa fa-bed fa-lg bedatr" id="pref-icon"> 3 Beds</i><br>
+              <i class="fa fa-money fa-lg priatr" id="pref-icon"> 3000 QAR/Month</i><br>
+              <i class="fa fa-clock-o fa-lg workAtr" id="pref-icon" style="padding-bottom:20px;"> 30 minutes away from work</i>
               <div class="col-md-12" style="padding-bottom:10px;">
               <p style="margin:0;" >Services close by</p>
               <i class="fa fa-wifi"></i>
@@ -160,7 +161,15 @@
            <div class="col-md-12" id="map" style="">
           <div id="map-canvas"></div>
 
-           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Q0QCbFhbqCHHVyWYAItHyGdPnR_y8hg&signed_in=true&callback=initMap"></script>
+         
+          
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Q0QCbFhbqCHHVyWYAItHyGdPnR_y8hg&libraries=places,geometry"></script>
+
+<script type="text/javascript" src="javascripts/distCalc.js"></script>
+
         </div>
 
         <div class="col-md-12 text-center footer">
@@ -170,6 +179,6 @@
         <script src='https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js'></script>
         <script src='https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.js'></script>
 
-        <script src="build/custom-js.js"></script>
+        <script src="javascripts/custom-js.js"></script>
   </body>
 </html>
