@@ -31,6 +31,17 @@ router.get('/find', function(req, res){
 	res.send("Nothing here for you to see!");
 })
 
+
+router.get('/filterData', function(req, res){
+
+	// read the JSON request
+	var data = req.query;
+
+	// send JSON
+	res.send(JSON.stringify(data));
+	
+});
+
 /* populate database */
 router.get('/fillApart', function(req, res){
 
