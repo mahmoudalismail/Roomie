@@ -8,8 +8,10 @@ var appartmentSchema = new Schema ({
 	roommate: Number,
 	price: Number,
 	phonenum: Number,
+	numbeds: Number,
 	metadata: [String], //Example: ["bed:2", "bath:1",...]
-	interests: [String]
+	interests: [String],
+	numImgs: Number
 });
 
 module.exports = mongoose.model('Appartment', appartmentSchema);

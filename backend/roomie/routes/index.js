@@ -37,8 +37,15 @@ router.get('/filterData', function(req, res){
 	// read the JSON request
 	var data = req.query;
 
-	// send JSON
-	res.send(JSON.stringify(data));
+	var apart = Apartment.find({}, function(err, result){
+		if(err){
+			console.log("ERROR");
+			res.send(null);
+		}
+		console.log("Results: ", result);
+		console.log("length: ", result.length)
+		res.send(JSON.stringify(result));	
+	});
 	
 });
 
@@ -46,14 +53,16 @@ router.get('/filterData', function(req, res){
 router.get('/fillApart', function(req, res){
 
 	var appartmentSchema = new Apartment ({
-		"category": "studio", 
-		"location":[1,2],
-		"address":"qatar foundation", 
-		"roommate":1,
-		"price": 100,
-		"phonenum": 33867438,
-		"metadata":["bed:2", "bath:1"], 
-		"interests":["run"]
+		"category": "apartment",
+		"location": [25.286865, 51.546529],
+		"address": "New Doha Qatar Petroleum Doha Qatar",
+		"roommate": 1,
+		"price": 6500,
+		"numbeds": 1,
+		"phonenum": 44376275,
+		"metadata": ["170 Square Meters", "bath:1"],
+		"interests": [],
+		"numImgs": 4
 	});
 
 	appartmentSchema.save(function (err, a) {
@@ -65,5 +74,6 @@ router.get('/fillApart', function(req, res){
   		});
 
 });
+
 
 module.exports = router;

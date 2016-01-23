@@ -1,5 +1,8 @@
 
-var fake_data = {min_budget: 1234};
+
+var fake_data = {min_budget: 1234,
+				 max_budget: 6000,
+				 num_roomates: 2};
 
 function test(){
 
@@ -10,7 +13,7 @@ function test(){
 	    data: fake_data
 	})
 	.done(function(res) {
-	    console.log("Data", JSON.parse(res));
+	    console.log("Data", JSON.parse(res)[1]);
 	  });
 
 }
