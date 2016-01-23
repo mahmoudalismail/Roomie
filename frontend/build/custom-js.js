@@ -1,10 +1,15 @@
 var vis = 0;
 var click=0;
 
+var filtered = 0;
+
+
+
+
 $(".button-left").click(function () {
-		console.log("vis: ",vis);
-		// Set the effect type
-	    if (click === 0){
+	console.log("vis: ",vis);
+	// Set the effect type
+    if (click == 0){
 	    var effect = 'slide';
 	    
 	    // Set the options for the effect type chosen
@@ -13,27 +18,35 @@ $(".button-left").click(function () {
 	    // Set the duration (default: 400 milliseconds)
 	    var duration = 300;
 
-	    $('#left-side').toggle(effect, options, duration);
-	    document.querySelector(".button-left").style.marginTop="5px";
-	    document.querySelector(".button-left").style.marginLeft="110px";
-	    document.querySelector(".button-left").style.color="white";
+	    // $('#left-side').toggle(effect, options, duration);
+	    openLeftSide();
+
 	    click = 1;
 	}
 	else{
 		click=0;
-		$('#left-side').toggle(effect, options, duration);
-	    document.querySelector(".button-left").style.marginTop="5px";
-	    document.querySelector(".button-left").style.marginLeft="10px";
-	    document.querySelector(".button-left").style.color="black";
+		options = { direction: "right" };
+		//$('#left-side').toggle(effect, options, duration);
+	    closeLeftSide();
+	 
 	}
 
 });
 
 $(".close").click(function (){
+
 	document.querySelector(".filter").style.display="none";
 	
 
-	});
+});
+
+$(".show-filter").click(function (){
+
+	document.querySelector(".filter").style.display="block";
+	
+
+});
+
 
 $("#slider1").roundSlider({
     sliderType: "range",
@@ -58,3 +71,36 @@ $("#slider3").roundSlider({
     steps:1,
     value: 0
 });
+
+$(".findRoommate").click(function(){
+	document.querySelector(".filter").style.display="none";
+
+	document.querySelector(".footer").style.display="block";
+	$('#map').css("padding-bottom", 230);
+	closeLeftSide();
+});
+
+function closeLeftSide(){
+	   document.querySelector("#left-side").style.display="none";
+
+	    document.querySelector(".button-left").style.marginTop="5px";
+	    document.querySelector(".button-left").style.marginLeft="10px";
+	    document.querySelector(".button-left").style.color="black";
+
+}
+
+function openLeftSide(){
+	document.querySelector("#left-side").style.display="block";
+
+    document.querySelector(".button-left").style.marginTop="5px";
+    document.querySelector(".button-left").style.marginLeft="110px";
+    document.querySelector(".button-left").style.color="white";
+
+    document.querySelector(".footer").style.display="none";
+    $('#map').css("padding-bottom", 0);
+
+}
+$("#close-pro").click(function(){
+	document.querySelector(".property").style.display="none";
+});
+

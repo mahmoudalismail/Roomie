@@ -84,6 +84,8 @@ html, body, #map-canvas {
 
 
 .footer{
+
+    display: none;
 	margin-top:auto;
 	background: rgba(63,63,63, 0.9);
 	margin:auto;
@@ -91,12 +93,10 @@ html, body, #map-canvas {
 	bottom:0;
 
 }
-.map{
-	padding-bottom:230px;
-}
+
 .property-image{
 	margin-top:10px;
-	width:200px;
+	width:150px;
 
 }
 .fa-bars{
@@ -111,10 +111,11 @@ html, body, #map-canvas {
     width: 97%; 
     height: 100%;
     margin-left:5%;
-    padding-bottom: 230px;
+    /*padding-bottom: 230px;*/
  }
 
  .filter{
+    display:none;
  	height: auto;
     width: 690px;
     margin-left: 280px;
@@ -247,4 +248,29 @@ html, body, #map-canvas {
 
 .form-control{
 	width: 260px;
+}
+
+#left-side{
+    display: none;
+}
+
+.form-group{
+    margin-left: -10px;
+}
+
+
+/*### Property ##*/
+ .property{
+    height: auto;
+    width: 1030px;
+    margin-left: 65px;
+    background-color: rgba(63,63,63,0.9);
+    margin-top: 15px;
+    position:fixed;
+    z-index:999999;
+    padding-bottom:20px;
+    display: none;
+ }
+#pref-icon{
+    padding-bottom:10px;
 }
