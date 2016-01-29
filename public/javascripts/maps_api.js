@@ -6,6 +6,7 @@ var keys = [];
 var data = [];
 
 var values = [];
+var timeToLocation = [];
 
 function toggleBounce(marker) {
   
@@ -31,6 +32,7 @@ function markClicked(marker){
    $(".rommatr").html("&nbsp" +value.roommate);
    $(".bedatr").html("&nbsp" +value.numbeds + "Bedrooms");
    $(".priatr").html("&nbsp" +value.price + "QAR/Month");
+   $(".workAtr").html("&bnsp" +timeToLocation[i]) // embed the time for each location
 
    i = i + 1;
    for (var j = 1; j <= 3; j++  )
@@ -56,10 +58,14 @@ function drawMap(){
 
 function initMap2(ready, apartments) {
   var sortedRes = computeDistanceKey(apartments);
-  var myLatLng = {lat:   25.286865, lng: 51.546529};
-
+  var myLatLng = {lat: 25.286865, lng: 51.546529};
+  
   keys = sortedRes.keys;
   values = sortedRes.data;
+
+  console.log("Values: ", values);
+  
+  timeToLocation = calcRoute(values[0].value.workLocation, values);
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
     zoom: 12,

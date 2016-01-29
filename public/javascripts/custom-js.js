@@ -86,9 +86,12 @@ $(".findRoommate").click(function(){
 	    console.log("Data", JSON.parse(res));
 	    data = JSON.parse(res)
 
-	    for(var i=0; i<data.length; i++)
+	    for(var i=0; i<data.length; i++) {
 	    	data[i].workLocation = currLocation;
-
+	    	console.log("WorkLocation", data[i].workLocation);
+	    	console.log("Location: ", data[i].location);
+	    }
+	    	
 	    initMap2(0, data);
 
 	  });
