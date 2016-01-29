@@ -1,35 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Page Title</title>
+        <title>Roomie</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+         <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.css'>
+        <link href="stylesheets/custom.css" rel="stylesheet" type="text/css">
+              <style>
+      .feat-icon{
+        color:white;
+      }
+      .feat-icon:hover{
+        color:#87bb4a;
+      }
+      .feat-icon2:hover{
+        color:#87bb4a;
+      }
+      .typed-cursor{
+        display:none;
+      }
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">      
-        <link href="./style/custom.css" rel="stylesheet" type="text/css">
+      </style>
+        
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="build/maps_api.js"></script>
+        <script src="javascripts/typed.js"></script>
+        <script>
+   
+            $(function(){
+                  $(".slogan").typed({
+                    strings: ["roommate finder Doha", "cheap apartments Doha", "Automagically finding an apartment that suits your needs and personal preferences <br>. . . . with a roomie!"],
+                    typeSpeed: 0
+                  });
+              });
+        </script>
 
   </head>
     </head>
-    <body onload="test();">
+    <body>
 
         <!--Top Bar-->
+        <div class="row">
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand navbar-custom" href="#"><img id="logo" src="./media/logo.png"></a>
+              <a class="navbar-brand navbar-custom" href="#"><img id="logo" src="images/logo.png"></a>
             </div>
           </div>
         </nav>
-    	
+        </div>
+      
       <!-- banner -->
       <div class="row">
+        <div style="margin-top:50px;" class="col-md-12 text-center">
+          <img style="margin-bottom:50px;" src="images/logo.png">
+          <h2 style="margin-bottom:50px;" class="slogan" ></h2>
+          <hr style="color:red; margin:0;">
+        </div>
 
       </div>
-	
+  
       <div class="row">
-        getting started
+        <div class="col-md-12 text-center" style="background-color:#3f3f3f;">
+        <h1 style="color:#87bb4a; margin-top:10px;"> The Problem</h1>
+          <p style="color:white;font-size:25px;">Rent too high? Need roommates to share the cost?<br>
+          We help you find the best location that suits your needs.</p>
+
+        </div>
       </div>
-      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-      <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      
+      <div class="row">
+        <div class="col-md-12 text-center">
+        <h1 style="color:#87bb4a; margin-top:10px;"> Features</h1>
+          <h4 style="color:white;">This is our problem statement</h4>
+          <div class="col-md-3">
+            <i class="fa fa-money fa-4x feat-icon2"></i>
+            <h4>Budget</h4>
+          </div>
+
+          <div class="col-md-3">
+            <i class="fa fa-users fa-4x feat-icon2"></i>
+            <h4>Roommates</h4>
+          </div>
+
+          <div class="col-md-3">
+            <i class="fa fa-bed fa-4x feat-icon2"></i>
+            <h4>Beds</h4>
+          </div>
+
+          <div class="col-md-3">
+            <i class="fa fa-map-marker fa-4x feat-icon2"></i>
+            <h4>Occupation Location</h4>
+          </div>
+             
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center" style="background-color:#3f3f3f; padding-bottom:50px;">
+        <h1 style="color:#87bb4a; margin-top:10px;"> Future</h1>
+            <div class="col-md-4 text-center">
+              <i class="fa fa-star fa-4x feat-icon"></i>
+              <h4 class="feat-icon">Interests</h4>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="fa fa-star-o fa-4x feat-icon"></i>
+              <h4 class="feat-icon">Habits</h4>
+            </div> 
+          <div class="col-md-4 text-center">
+              <i class="fa fa-paw fa-4x feat-icon"></i>
+              <h4 class="feat-icon">Pets</h4>
+            </div>
+            <a href="find.html"><button type="button" class="btn btn-success btn-lg" style="margin-top:50px;">Demo</button></a>
+        </div>
+      </div>
+
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         
         <script type="text/javascript" src="build/find_trip_time.js"></script>

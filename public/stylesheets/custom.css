@@ -33,7 +33,7 @@ html, body, #map-canvas {
     }
 
 
-body{
+#body{
   background-color: #3F3F3F;
 }
 
@@ -123,9 +123,9 @@ body{
     display:none;
  	height: auto;
     width: 690px;
-    margin-left: 280px;
+    margin-left: 700px;
     background-color: rgba(63,63,63,0.9);
-    margin-top: 15px;
+    margin-top: 120px;
  	position:fixed;
  	z-index:999999;
  }
@@ -268,9 +268,9 @@ body{
  .property{
  	height: auto;
     width: 1030px;
-    margin-left: 65px;
+    margin-left: 430px;
     background-color: rgba(63,63,63,0.9);
-    margin-top: 15px;
+    margin-top: 80px;
     position:fixed;
     z-index:999999;
     padding-bottom:20px;
