@@ -21,7 +21,7 @@ Go to `localhost:3000` in your browser and find an apartment.
 
 ### Homepage
 
-[homepage]: readme_static/homepage.png
+![homepage](readme_static/homepage.png)
 
 # Stack
 
