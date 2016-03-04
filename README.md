@@ -4,7 +4,7 @@ Roomie finds you an apartment to sublet with other people based on your preferen
 
 # Team
 
-Roomie is a web application that had been developed during the CarnegieApps Hackathon 16’. We were lucky to have a great team consisting of John Naguib (Backend Ninja), Zehni Khairullah (UI Freak), Nassih Goopee (Algorithms Pro), and Mahmoud Alismail (API Hacker).
+Roomie is a web application that had been developed during the [CarnegieApps Hackathon 16’](http://carnegieapps.com). We were lucky to have a great team consisting of [John Naguib](https://github.com/jnaguib) (Backend Ninja), [Zehni Khairullah](https://github.com/zehni) (UI Freak), [Naassih Gopee](https://github.com/nogarithm) (Algorithms Pro), and [Mahmoud Alismail](https://github.com/mahmoudalismail) (API Hacker).
 
 # Motivation
 
@@ -19,7 +19,9 @@ Go to `localhost:3000` in your browser and find an apartment.
 
 # Screenshots
 
-Attach us some screenshots
+### Homepage
+
+[homepage]: readme_static/homepage.png
 
 # Stack
 
