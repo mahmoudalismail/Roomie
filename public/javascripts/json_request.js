@@ -1,4 +1,7 @@
-
+/*
+ * Testing/Experimental script to teset jQuery Ajax
+ *
+*/
 
 var fake_data = {min_budget: 1234,
 				 max_budget: 6000,

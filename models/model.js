@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 , Schema = mongoose.Schema;
 
-var appartmentSchema = new Schema ({
+var apartmentSchema = new Schema ({
 	category: String, // studio, apartment...
 	location: [Number],
 	address: String,
@@ -14,4 +14,4 @@ var appartmentSchema = new Schema ({
 	numImgs: Number
 });
 
-module.exports = mongoose.model('Appartment', appartmentSchema);
+module.exports = mongoose.model('Appartment', apartmentSchema);

@@ -1,15 +1,12 @@
-// don't always call, it will exceed the limit!
+/* 
+ * Script to find the trip time from current location to desired apartment
+ * Do not always call, it will exceed the limit!
+ *
+ */
+
 function calcRoute(work_loc, values) {
 
-  console.log("Work_loc: ", work_loc);
-  // console.log("Values: ", values);
-
   var data = [];
-  
-
-  25.234057
-  51.467708
-  console.log(values.length)
 
   for(var i=0; i < values.length; i++){
 

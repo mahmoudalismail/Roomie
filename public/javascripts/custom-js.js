@@ -1,10 +1,12 @@
+/*
+ * UI Script
+ *
+ */
+
 var vis = 0;
 var click=0;
-
 var filtered = 0;
-
 var currLocation = {lonitude: 0, latitude: 0};
-
 
 $(".button-left").click(function () {
 	console.log("vis: ",vis);
@@ -30,8 +32,6 @@ $(".close").click(function (){
 	
 
 });
-
-
 
 $(".show-filter").click(function (){
 

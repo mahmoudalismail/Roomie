@@ -17,19 +17,16 @@ router.get('/getAll', function(req, res){
 			console.log("ERROR");
 			res.send(null);
 		}
-		console.log("Results: ", result);
 		res.send({aparts: JSON.stringify(result)});
-	})
-})
+	});
+});
 
 /* AJAX */
 router.get('/find', function(req, res){
-/*
- * request data is accessed by: 
- * 	req.query.<yourField>
- */
+
    res.sendfile("public/find.html");
-})
+
+});
 
 
 router.get('/filterData', function(req, res){
@@ -42,38 +39,37 @@ router.get('/filterData', function(req, res){
 			console.log("ERROR");
 			res.send(null);
 		}
-		console.log("Results: ", result);
-		console.log("length: ", result.length)
 		res.send(JSON.stringify(result));	
 	});
 	
 });
 
 /* populate database */
-router.get('/fillApart', function(req, res){
+/* used only for testing purposes */
+// router.get('/fillApart', function(req, res){
 
-	var appartmentSchema = new Apartment ({
-		"category": "apartment",
-		"location": [25.286865, 51.546529],
-		"address": "New Doha Qatar Petroleum Doha Qatar",
-		"roommate": 1,
-		"price": 6500,
-		"numbeds": 1,
-		"phonenum": 44376275,
-		"metadata": ["170 Square Meters", "bath:1"],
-		"interests": [],
-		"numImgs": 4
-	});
+// 	var appartmentSchema = new Apartment ({
+// 		"category": "apartment",
+// 		"location": [25.286865, 51.546529],
+// 		"address": "New Doha Qatar Petroleum Doha Qatar",
+// 		"roommate": 1,
+// 		"price": 6500,
+// 		"numbeds": 1,
+// 		"phonenum": 44376275,
+// 		"metadata": ["170 Square Meters", "bath:1"],
+// 		"interests": [],
+// 		"numImgs": 4
+// 	});
 
-	appartmentSchema.save(function (err, a) {
-      		if (err) console.log(err);
-      		else
-      			console.log(a);
-      			console.error('saved appartment to mongo');
-      			res.send("Great, saved appartment to mongo!\n");
-  		});
+// 	appartmentSchema.save(function (err, a) {
+//       		if (err) console.log(err);
+//       		else
+//       			console.log(a);
+//       			console.error('saved appartment to mongo');
+//       			res.send("Great, saved appartment to mongo!\n");
+//   		});
 
-});
+// });
 
 
 module.exports = router;

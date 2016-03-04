@@ -1,5 +1,7 @@
+/*
+ * Script to calculate the distance between two coordinates in km's
+ */
 
-//calculates distance between two points in km's
 function calcDistance(p1, p2){
 
   return ((google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2));

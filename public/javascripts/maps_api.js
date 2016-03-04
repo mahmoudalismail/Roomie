@@ -1,4 +1,7 @@
-
+/*
+ * Google Maps API requests, they deal with Maps API business
+ *
+ */
 
 var markers = [];
 
