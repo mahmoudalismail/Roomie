@@ -23,6 +23,18 @@ Go to `localhost:3000` in your browser and find an apartment.
 
 ![homepage](readme_static/homepage.png)
 
+### Finding Apartments
+
+![finding](readme_static/find.png)
+
+### Navigation
+
+![navigation](readme_static/navigation.png)
+
+### Apartment
+
+![view_apartment](readme_static/view_apartment.png)
+
 # Stack
 
 We have used the following technologies:
